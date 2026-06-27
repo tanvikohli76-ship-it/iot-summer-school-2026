@@ -244,3 +244,57 @@ Serial Monitor displays:
 Sweep Angle: 0
 Sweep Angle: 90
 Sweep Angle: 180
+
+## Project Title
+
+DC Motor Speed & Direction Control using L298N Driver (Tinkercad)
+
+**1. Hardware Required**
+Arduino UNO
+L298N Motor Driver
+DC Motor
+Potentiometer (10kΩ)
+2 Push Buttons
+10kΩ Resistors (×2 for pull-down)
+External Power Supply (Battery 9V or similar for motor)
+Breadboard
+Jumper Wires
+
+**2. Circuit Diagram Description (Text-Based)** 
+L298N Connections
+IN1→ Pin 8
+IN2 → Pin 7
+ENA → Pin 9 (PWM)
+Motor → OUT1 & OUT2
+12V → External Battery (+)
+GND → Battery (-) + Arduino GND (COMMON GND)
+Potentiometer
+Left → 5V
+Right → GND
+Middle → A0
+ Buttons
+Direction Button
+One side → 5V
+Other side → Pin 2
+10kΩ resistor → GND
+Start/Stop Button
+One side → 5V
+Other side → Pin 3
+10kΩ resistor → GND
+
+**3.Working Principle**
+ Potentiometer controls motor speed (0–100%)
+ Button 1 (Pin 2) toggles direction:
+Forward ↔ Reverse
+ Button 2 (Pin 3) toggles:
+Start ↔ Stop
+ L298N driver controls motor safely using PWM
+
+ Serial Monitor shows:
+
+State: ON | Direction: Forward | Speed: 65%
+
+**4. Expected Output**
+State: ON | Direction: Forward | Speed: 20%
+State: ON | Direction: Reverse | Speed: 75%
+State: OFF | Direction: Reverse | Speed: 0%
