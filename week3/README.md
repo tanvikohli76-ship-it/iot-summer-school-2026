@@ -43,3 +43,46 @@ Temperature > 35°C OR Humidity > 80%
 Otherwise:
 → Green LED turns ON (normal condition)
 The system continuously monitors environmental conditions in real time.
+
+## Ultrasonic Parking Sensor System (HC-SR04)
+
+**1. Project Title**
+
+Ultrasonic Parking Distance Alert System
+
+**2. Hardware Required**
+Arduino Uno
+HC-SR04 Ultrasonic Sensor
+1 × Red LED
+1 × Yellow LED
+1 × Green LED (optional for safe indication)
+3 × 220Ω Resistors
+Buzzer
+Breadboard
+Jumper Wires
+
+**3. Circuit Diagram Description**
+HC-SR04 Connections:
+VCC → 5V
+GND → GND
+TRIG → Pin 2
+ECHO → Pin 3
+LEDs:
+Red LED → Pin 8 (via resistor)
+Yellow LED → Pin 9 (via resistor)
+Green LED → Pin 10 (via resistor)
+Buzzer:
+Positive → Pin 11
+Negative → GND
+
+**4. Expected Output**
+Distance Range	Output
+> 50 cm	SAFE message, Green LED ON
+20–50 cm	Yellow LED ON, buzzer beeps every 500ms
+10–20 cm	Red LED ON, buzzer beeps every 200ms
+< 10 cm	All LEDs flash rapidly, buzzer continuous
+
+**- Bonus (Why millis is used?)**
+millis() allows non-blocking timing
+Unlike delay(), it lets the sensor keep reading continuously
+Required for smooth buzzer + LED behavior
