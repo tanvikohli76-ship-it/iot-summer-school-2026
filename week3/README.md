@@ -191,3 +191,56 @@ Temp      : 28.5 C | Humidity: 65%
 Light     : 73% (Bright)
 Distance  : 42 cm
 
+## Project Title 
+
+## Servo Motor Control with Potentiometer and Button (Tinkercad Simulation)
+
+**1. Hardware Required***
+Arduino UNO
+SG90 Servo Motor
+Potentiometer (10kΩ)
+Push Button
+10kΩ Resistor (for pull-down)
+Breadboard
+Jumper Wires
+
+**2. Circuit Diagram Description (Text-Based)**
+ Potentiometer
+Left pin → 5V
+Right pin → GND
+Middle pin → A0 (Analog input)
+ Servo Motor
+Red wire → 5V
+Brown wire → GND
+Orange wire → Digital Pin 9
+ Push Button
+One terminal → 5V
+Other terminal → Digital Pin 2
+10kΩ resistor connected between Pin 2 and GND (pull-down resistor)
+
+**3. Working Principle**
+The potentiometer controls the servo angle from 0° to 180°
+The button triggers a one-time sweep motion:
+Servo moves from 0° → 180° → 0°
+After the sweep, control returns to the potentiometer
+The current angle is displayed on the Serial Monitor
+
+**4.Expected Output**
+Normal Mode:
+Rotating the potentiometer changes servo angle smoothly
+
+Serial Monitor displays:
+
+Angle: 45
+Angle: 120
+Button Press:
+
+Servo performs:
+
+0 → 180 → 0
+
+Serial Monitor displays:
+
+Sweep Angle: 0
+Sweep Angle: 90
+Sweep Angle: 180
