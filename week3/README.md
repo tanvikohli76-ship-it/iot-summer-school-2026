@@ -190,4 +190,4 @@ Time      : 12345 ms
 Temp      : 28.5 C | Humidity: 65%
 Light     : 73% (Bright)
 Distance  : 42 cm
-==================
+
