@@ -14,8 +14,6 @@ LED Blink with Adjustable Speed and Serial Monitoring
 
 ##  Circuit Diagram Description
 
-<img width="1920" height="1080" alt="Screenshot (200)" src="https://github.com/user-attachments/assets/cf6c7dd8-9b07-475d-aa40-dacbf2a4aafb" />
-
 - Connect the LED anode (+) to digital pin 13 through a 220Ω resistor  
 - Connect the LED cathode (-) to GND 
 - Connect the middle pin of the potentiometer to A0 (analog pin)
