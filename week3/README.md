@@ -86,3 +86,55 @@ Distance Range	Output
 millis() allows non-blocking timing
 Unlike delay(), it lets the sensor keep reading continuously
 Required for smooth buzzer + LED behavior
+
+## Smart Street Light (LDR + PIR)
+
+**1. Project Title**
+
+Smart Street Light Controller using LDR and PIR Sensor
+
+**2.  Hardware Required**
+Arduino Uno
+LDR (Photoresistor)
+PIR Motion Sensor
+LED
+220Ω Resistor (for LED)
+10kΩ Resistor (for LDR voltage divider)
+Breadboard
+Jumper Wires
+
+**3. Circuit Diagram Description**
+The LDR is connected in a voltage divider configuration:
+One end → 5V
+Other end → A0 and connected to GND via a 10kΩ resistor
+The PIR sensor is connected as follows:
+VCC → 5V
+GND → GND
+OUT → Digital Pin 2
+The LED is connected to PWM Pin 9 through a 220Ω resistor:
+Anode → Pin 9
+Cathode → Resistor → GND
+All components share a common ground connection
+
+**4. Expected Output**
+ Daytime (LDR above threshold)
+LED remains OFF
+
+Serial Monitor logs:
+
+[HH:MM:SS] EVENT: Daytime - Light OFF
+ Night Mode (LDR below threshold)
+System activates motion detection
+ Motion Detected at Night
+LED turns ON at full brightness (PWM = 255)
+Stays ON for 30 seconds
+
+Serial log:
+
+[HH:MM:SS] EVENT: Motion detected - Full brightness
+ No Motion After 30 Seconds
+LED dims to 20% brightness (PWM ≈ 51)
+
+Serial log:
+
+[HH:MM:SS] EVENT: No motion - Dim light
