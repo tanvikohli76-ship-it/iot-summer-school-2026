@@ -67,10 +67,10 @@ void loop() {
     }
   }
 
-  // ⚡ APPLY RELAY STATE
+  //  APPLY RELAY STATE
   digitalWrite(RELAY_PIN, relayState ? HIGH : LOW);
 
-  // 📟 DEBUG OUTPUT (VERY IMPORTANT)
+  //  DEBUG OUTPUT (VERY IMPORTANT)
   Serial.print("Temp: ");
   Serial.print(temp);
   Serial.print(" °C | Relay: ");
