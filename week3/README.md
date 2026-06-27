@@ -247,7 +247,7 @@ Sweep Angle: 180
 
 ## Project Title
 
-DC Motor Speed & Direction Control using L298N Driver (Tinkercad)
+## DC Motor Speed & Direction Control using L298N Driver (Tinkercad)
 
 **1. Hardware Required**
 Arduino UNO
@@ -298,3 +298,67 @@ State: ON | Direction: Forward | Speed: 65%
 State: ON | Direction: Forward | Speed: 20%
 State: ON | Direction: Reverse | Speed: 75%
 State: OFF | Direction: Reverse | Speed: 0%
+
+## Relay-Controlled AC Device Simulation (DHT11 + Arduino)
+
+ **1. Project Overview**
+
+This project simulates an automatic AC (Air Conditioner) control system using an Arduino, a DHT11 temperature sensor, and a relay module.
+
+The system turns ON the AC when temperature rises above 32°C
+It turns OFF when temperature drops below 28°C
+A manual override button allows user control
+An LED is used to simulate the AC device
+
+**2. Components Used**
+Arduino UNO
+DHT11 Temperature Sensor
+Relay Module
+LED (AC simulation)
+220Ω Resistor
+Push Button
+Jumper Wires
+
+**3.Circuit Connections**
+ DHT11 Sensor
+VCC → 5V
+GND → GND
+DATA → Pin 2
+ Relay Module
+VCC → 5V
+GND → GND
+IN → Pin 8
+ LED (Simulated AC via Relay)
+Relay COM → 5V
+Relay NO → LED (+)
+LED (–) → Resistor → GND
+ Push Button (Manual Override)
+One side → Pin 7
+Other side → GND
+Uses INPUT_PULLUP
+ Working Principle
+ Automatic Mode (Default)
+If temperature > 32°C → Relay ON (AC ON)
+If temperature < 28°C → Relay OFF (AC OFF)
+
+ This gap creates hysteresis, preventing rapid ON/OFF switching.
+
+ Manual Override
+Pressing the button toggles:
+Manual mode ON/OFF
+Relay state manually
+
+**4. Serial Monitor Output**
+
+The system continuously logs:
+
+Current Temperature
+Relay State (ON/OFF)
+Mode (AUTO/MANUAL)
+Temperature Zone
+Example:
+Temp: 30 °C | Relay: OFF | Mode: AUTO | Zone: Stable
+ AC ON (Temp > 32°C)
+Temp: 33 °C | Relay: ON | Mode: AUTO | Zone: ON Zone
+ AC OFF (Temp < 28°C)
+Temp: 27 °C | Relay: OFF | Mode: AUTO | Zone: OFF Zone
