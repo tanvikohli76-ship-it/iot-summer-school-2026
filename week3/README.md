@@ -138,3 +138,56 @@ LED dims to 20% brightness (PWM ≈ 51)
 Serial log:
 
 [HH:MM:SS] EVENT: No motion - Dim light
+
+## Multi-Sensor Data Logger (Wokwi)
+
+**1. Project Title**
+
+Multi-Sensor Data Logger using Arduino (DHT11 + LDR + HC-SR04)
+
+**2. Components Required (Wokwi)**
+Arduino Uno
+DHT11 Temperature & Humidity Sensor
+LDR (Light Dependent Resistor)
+10kΩ Resistor (for LDR voltage divider)
+HC-SR04 Ultrasonic Sensor
+Jumper Wires
+
+**3. Circuit Connections**
+1. DHT11 Sensor
+VCC → 5V
+GND → GND
+DATA → Digital Pin 2
+2. LDR (Light Sensor)
+One leg → 5V
+Other leg → A0 and 10kΩ resistor
+Other end of resistor → GND
+
+Forms a voltage divider
+
+3. HC-SR04 Ultrasonic Sensor
+VCC → 5V
+GND → GND
+TRIG → Pin 9
+ECHO → Pin 10
+
+**4. How to Run in Wokwi**
+Go to Wokwi Arduino Simulator
+Click New Project
+Add components:
+Arduino Uno
+DHT11
+LDR
+HC-SR04
+Make connections as described above
+Paste the Arduino code
+Click Start Simulation
+Open Serial Monitor
+
+**5. Expected Output (Every 5 Seconds)**
+=== SENSOR LOG ===
+Time      : 12345 ms
+Temp      : 28.5 C | Humidity: 65%
+Light     : 73% (Bright)
+Distance  : 42 cm
+==================
