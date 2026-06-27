@@ -5,9 +5,9 @@
 Environmental Monitoring Station using DHT22
 
 **2. Library Used**
-DHT Sensor Library by Adafruit
+**DHT Sensor Library by Adafruit
 Version: 1.4.4
-Used for reading temperature and humidity data from the DHT sensor
+Used for reading temperature and humidity data from the DHT sensor*
 
 Note: DHT22 was used in simulation (Wokwi) as a substitute for DHT11. The functionality remains the same.
 
@@ -41,5 +41,5 @@ If:
 Temperature > 35°C OR Humidity > 80%
 → Red LED turns ON (alert condition)
 Otherwise:
-→ 🟢 Green LED turns ON (normal condition)
+→ Green LED turns ON (normal condition)
 The system continuously monitors environmental conditions in real time.
