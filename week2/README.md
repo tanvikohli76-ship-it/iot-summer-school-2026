@@ -1,9 +1,10 @@
-Traffic Light Controller with Pedestrian Override (Arduino)
-1. Project Title
+## Traffic Light Controller with Pedestrian Override (Arduino)
+
+**1. Project Title**
 
 Traffic Light Controller using Arduino UNO with Pedestrian Button
 
-2. Hardware Required
+**2. Hardware Required**
 Arduino UNO
 Breadboard
 3 LEDs (Red, Yellow, Green)
@@ -11,16 +12,16 @@ Breadboard
 1 Push Button
 Jumper Wires
 USB Cable
-3. Circuit Diagram Description (Text-Based)
+
+**4. Circuit Diagram Description (Text-Based)**
 Red LED → Connected to Pin 10 through a resistor → GND
 Yellow LED → Connected to Pin 9 through a resistor → GND
 Green LED → Connected to Pin 8 through a resistor → GND
 Push Button → One side to Pin 7, other side to GND
 Arduino GND connected to breadboard ground rail
+The button uses INPUT_PULLUP, so it reads LOW when pressed
 
- The button uses INPUT_PULLUP, so it reads LOW when pressed
-
-4. How to Upload Code (Step-by-Step)
+**4. How to Upload Code (Step-by-Step)**
 -Connect Arduino UNO to your computer using USB cable
 -Open Arduino IDE
 -Copy and paste the provided code into a new sketch
@@ -29,7 +30,8 @@ Arduino GND connected to breadboard ground rail
 -Click Verify (✔) to compile the code
 -Click Upload (→) to upload the code to Arduino
 -Open Serial Monitor (9600 baud rate)
-5. Expected Output
+
+**5. Expected Output**
 LEDs follow sequence:
 🔴 RED → 5 seconds
 🟡 YELLOW → 2 seconds
@@ -41,7 +43,8 @@ When button is pressed:
 -Serial Monitor displays:
 -Current light state
 -Timestamp using millis()
-6. Troubleshooting Tips
+
+**6. Troubleshooting Tips**
 -LED not glowing?
 Check polarity (long leg = positive)
 Ensure resistor is connected properly
