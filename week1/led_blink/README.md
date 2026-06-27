@@ -49,10 +49,10 @@ Blink count: X
  - Check wiring of LED (polarity matters)
  - Ensure correct pin (pin 13) is used  
 
-3. **Potentiometer not affecting speed**
+2. **Potentiometer not affecting speed**
  - Verify connections to A0, 5V, and GND  
  - Ensure correct mapping in code  
 
-4. **Upload error**
+3. **Upload error**
  - Check correct COM port selected  
  - Ensure no other application is using the port  
