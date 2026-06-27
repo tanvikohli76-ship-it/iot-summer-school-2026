@@ -1,3 +1,9 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: LED blink with adjustable speed using potentiometer and serial blink counter
+*/
+
 int led = 13;
 int pot = A0;
 int count = 0;
