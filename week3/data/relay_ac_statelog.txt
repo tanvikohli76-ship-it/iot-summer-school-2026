@@ -1,0 +1,15 @@
+
+Temp: -1.00 °C | Relay: OFF
+Temp: -1.00 °C | Relay: OFF
+Temp: -1.00 °C | Relay: OFF
+Temp: -1.00 °C | Relay: OFF
+Temp: -1.00 °C | Relay: OFF
+Temp: -1.00 °C | Relay: OFF
+Temp: -1.00 °C | Relay: OFF
+Manual Override Triggered!
+Temp: -1.00 °C | Relay: ON
+Temp: -1.00 °C | Relay: ON
+Temp: -1.00 °C | Relay: ON
+Temp: -1.00 °C | Relay: ON
+Temp: -1.00 °C | Relay: ON
+Temp: -1.00 °C | Relay: ON
