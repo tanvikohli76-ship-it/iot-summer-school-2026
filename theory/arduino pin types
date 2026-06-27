@@ -1,0 +1,28 @@
+List and explain with examples: Digital Input, Digital Output, Analog Input, PWM Output, and 
+I2C/SPI pins available on Arduino UNO. For each, give one real IoT use case.
+
+1. Digital Input
+Digital input pins are used to read binary signals from external devices. These signals can be either HIGH (1) or LOW (0). The Arduino UNO has digital pins from D0 to D13, which can be configured as input using pinMode(pin, INPUT).
+Example: A push button or motion sensor.
+IoT Use Case: In a smart security system, a motion sensor sends a HIGH signal when movement is detected.
+2. Digital Output
+Digital output pins are used to send binary signals (HIGH or LOW) to control external components. These pins can turn devices ON or OFF.
+Example: LED, buzzer, or relay module.
+IoT Use Case: In a smart home system, an LED or relay is turned ON/OFF remotely through the internet.
+3. Analog Input
+Analog input pins read varying voltage levels and convert them into digital values using an ADC (Analog-to-Digital Converter). The Arduino UNO has 6 analog pins (A0–A5) with values ranging from 0 to 1023.
+Example: Temperature sensor, LDR, or potentiometer.
+IoT Use Case: In a weather monitoring system, temperature or light intensity is continuously measured and sent to the cloud.
+4. PWM Output
+PWM (Pulse Width Modulation) pins simulate analog output using digital signals by varying the duty cycle. These pins are marked with (~) and include pins 3, 5, 6, 9, 10, and 11.
+Example: Controlling LED brightness or servo motor position.
+IoT Use Case: In a smart fan system, PWM is used to control fan speed based on temperature readings.
+5. I2C and SPI Communication Pins
+I2C (Inter-Integrated Circuit)
+I2C is a communication protocol that uses two wires: SDA (data) and SCL (clock). On Arduino UNO, SDA is A4 and SCL is A5. It allows multiple devices to communicate with a single master.
+Example: LCD display, sensors.
+IoT Use Case: Connecting multiple sensors to a microcontroller in a smart monitoring system.
+SPI (Serial Peripheral Interface)
+SPI is a high-speed communication protocol using four lines: MOSI, MISO, SCK, and SS. On Arduino UNO, these are pins D11, D12, D13, and D10 respectively.
+Example: SD card module, display modules.
+IoT Use Case: Fast data transfer between microcontroller and storage or display in IoT devices.
