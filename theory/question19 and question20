@@ -1,0 +1,14 @@
+Q19. (Theory) What is the difference between analogWrite() and analogRead() in Arduino? What is PWM and why is it used? Give a practical IoT example for each.
+analogRead() and analogWrite() serve different purposes in Arduino.
+analogRead() is used to read analog input signals from sensors. It converts a voltage (0–5V) into a digital value between 0 and 1023 using the ADC (Analog to Digital Converter). It is used with analog input pins like A0–A5.
+analogWrite() is used to produce a pseudo-analog output using PWM (Pulse Width Modulation). It generates a digital signal that switches ON and OFF rapidly to simulate an analog voltage. The output value ranges from 0 to 255 and is used on PWM pins.
+PWM (Pulse Width Modulation) is a technique where the width of the ON time (duty cycle) of a signal is varied to control the average voltage. It is used because Arduino cannot generate true analog output.
+In IoT applications, analogRead() can be used in systems like temperature monitoring where sensor values are read and processed. analogWrite() is used in applications like smart lighting systems to control LED brightness based on environmental conditions.
+
+Q20. (Theory) Explain the setup() and loop() functions in Arduino. What happens if you put a long delay() inside loop()? How does this affect sensor reading responsiveness? What is the non-blocking alternative?
+In Arduino, the setup() function runs only once when the program starts. It is used for initialization tasks such as setting pin modes and starting serial communication.
+The loop() function runs repeatedly in an infinite cycle. It contains the main logic of the program and keeps executing as long as the Arduino is powered.
+If a long delay() is used inside the loop(), the program stops executing other tasks during that time. This makes the system unresponsive, as it cannot read sensors or detect inputs while waiting.
+This negatively affects sensor responsiveness because inputs may be missed or delayed.
+A non-blocking alternative is using the millis() function. It allows timing without stopping the program, enabling continuous sensor reading and better responsiveness.
+
