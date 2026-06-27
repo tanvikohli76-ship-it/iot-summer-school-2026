@@ -1,0 +1,59 @@
+#include <DHT.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+
+#define RELAY 8
+#define BUTTON 7
+
+DHT dht(DHTPIN, DHTTYPE);
+
+bool relayState = false;
+bool manualOverride = false;
+
+void setup() {
+  Serial.begin(9600);
+  
+  pinMode(RELAY, OUTPUT);
+  pinMode(BUTTON, INPUT_PULLUP);
+
+  dht.begin();
+
+  digitalWrite(RELAY, LOW); // OFF initially
+}
+
+void loop() {
+  float temp = dht.readTemperature();
+
+  if (isnan(temp)) {
+    Serial.println("Failed to read DHT!");
+    return;
+  }
+
+  // Manual Override Toggle
+  if (digitalRead(BUTTON) == LOW) {
+    delay(200);
+    manualOverride = !manualOverride;
+    relayState = !relayState;
+
+    Serial.println("Manual Override Triggered!");
+  }
+
+  //  Automatic Control (only if no override)
+  if (!manualOverride) {
+    if (temp > 32 && !relayState) {
+      relayState = true;
+      Serial.println("AC ON (Temp High)");
+    }
+    else if (temp < 28 && relayState) {
+      relayState = false;
+      Serial.println("AC OFF (Temp Low)");
+    }
+  }
+
+  // ⚡ Relay Control
+  digitalWrite(RELAY, relayState ? HIGH : LOW);
+
+  // Logging
+  Serial.print("Temp: ");
+  Serial.print(temp);
