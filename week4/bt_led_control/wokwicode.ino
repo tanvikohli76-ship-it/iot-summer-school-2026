@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-28
+  Description: Bluetooth led controller
+*/
 char command;
 
 int redLED = 6;
