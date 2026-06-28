@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-28
+  Description: BLE sensor
+*/
 #include <DHTesp.h>
 
 #define DHT_PIN 15   // You can use GPIO 15
