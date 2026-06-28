@@ -40,5 +40,64 @@ When implemented on hardware:
 4. Arduino reads the data using Serial.read()
 5. LEDs respond based on received commands
 
+## Project title
+## ESP32 BLE Sensor Dashboard (DHT22)
 
+This project uses an ESP32 microcontroller to read temperature and humidity data from a DHT22 sensor and broadcast it over Bluetooth Low Energy (BLE). The data is updated every 3 seconds and can be viewed using BLE scanner apps such as nRF Connect or LightBlue.
+
+**BLE Configuration**
+
+ Service UUID- 
+12345678-1234-1234-1234-1234567890ab
+ Characteristics- 
+ 
+ Temperature Characteristic-
+UUID: 12345678-1234-1234-1234-1234567890ac 
+Properties: Read, Notify 
+Description: Sends temperature in °C 
+ Humidity Characteristic-
+UUID: 12345678-1234-1234-1234-1234567890ad 
+Properties: Read, Notify 
+Description: Sends humidity in % 
+ Timestamp Characteristic- 
+UUID: 12345678-1234-1234-1234-1234567890ae 
+Properties: Read, Notify 
+Description: Time in seconds since device start
+
+* BLE Descriptors
+Each characteristic includes a BLE2902 descriptor, which enables notifications so that data updates automatically on the client device.
+
+
+**1. Hardware Required**
+ESP32 DevKit V1
+DHT22 Temperature & Humidity Sensor
+Jumper Wires
+Breadboard
+
+**2. Working Principle**
+The DHT22 sensor reads temperature and humidity.
+ESP32 processes the data.
+BLE service is created with characteristics.
+Data is updated and sent every 3 seconds.
+A mobile app scans and displays the values in real-time.
+
+**3. How to Test**
+Upload the code to ESP32
+Turn on Bluetooth on your phone
+Open:
+nRF Connect OR
+LightBlue
+
+Scan for device:
+
+ESP32_DHT22
+Connect and observe:
+Temperature
+Humidity
+Timestamp
+
+**4. Expected Output**
+Data updates every 3 seconds
+Values visible inside BLE app
+Real-time sensor monitoring
 
