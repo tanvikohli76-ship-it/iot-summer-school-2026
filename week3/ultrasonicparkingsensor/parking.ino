@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: ultrasonic parking sensor
+*/
 #define TRIG_PIN 2
 #define ECHO_PIN 3
 
