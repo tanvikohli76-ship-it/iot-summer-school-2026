@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-28
+  Description: wifi webserver
+*/
 #include <DHTesp.h>
 
 #define DHT_PIN 15
