@@ -1,7 +1,7 @@
 /*
   Author: Tanvi Kohli
   Date: 2026-06-27
-  Description: digital piano buzzer
+  Description: digital piano buzzer with feature 1
 */
 int buzzer = 8;
 int b1 = 2;
