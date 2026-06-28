@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-28
+  Description: MQTT sensor publisher using HIVEMQ
+*/
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <DHTesp.h>
