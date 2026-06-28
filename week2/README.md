@@ -61,6 +61,8 @@ Ensure USB cable is properly connected
 Check baud rate is set to 9600
 Ensure Serial.begin(9600); is present
 
+Tinkercad link: https://www.tinkercad.com/things/jgei6iyx8or-pushbutton-traffic-light/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall
+
 ##  Digital Piano using Buzzer
 
 1. Project Title
