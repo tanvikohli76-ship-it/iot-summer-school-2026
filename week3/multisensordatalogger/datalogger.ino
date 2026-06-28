@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: multisensor data logger
+*/
 #include <DHT.h>
 
 #define DHTPIN 4
