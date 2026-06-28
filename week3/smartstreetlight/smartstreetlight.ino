@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: smart street light
+*/
 #define LDR_PIN A0
 #define PIR_PIN 2
 #define LED_PIN 9
