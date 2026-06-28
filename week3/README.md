@@ -362,3 +362,61 @@ Temp: 30 °C | Relay: OFF | Mode: AUTO | Zone: Stable
 Temp: 33 °C | Relay: ON | Mode: AUTO | Zone: ON Zone
  AC OFF (Temp < 28°C)
 Temp: 27 °C | Relay: OFF | Mode: AUTO | Zone: OFF Zone
+
+## Password Protected Access System using Keypad & LCD
+
+**1. Project Title**
+
+Password-Based Access Control System using 4x4 Keypad and 16x2 LCD (Arduino)
+
+**2. Hardware Required**
+Arduino Uno
+16x2 LCD (Parallel Interface)
+10k Potentiometer (for contrast control)
+4x4 Membrane Keypad
+Green LED
+Red LED
+Buzzer
+Resistors (220Ω for LEDs)
+Breadboard
+Jumper Wires
+
+**3. Circuit Diagram Description (Text-Based)**
+ LCD Connections
+VSS → GND
+VDD → 5V
+VO → Middle pin of potentiometer
+RS → Digital Pin 7
+RW → GND
+E → Digital Pin 6
+D4 → Pin 5
+D5 → Pin 4
+D6 → Pin 3
+D7 → Pin 2
+A (LED+) → 5V
+K (LED−) → GND
+ Potentiometer
+Left → GND
+Right → 5V
+Middle → VO (LCD)
+ Keypad Connections
+Rows → Pins 8, 9, 10, 11
+Columns → Pins 12, 13, A0, A1
+ LEDs &  Buzzer
+Green LED → A2 (via resistor to GND)
+Red LED → A3 (via resistor to GND)
+Buzzer → A4 (GND to negative)
+
+**4. Expected Output**
+LCD displays: "ENTER PIN:"
+User enters a 4-digit PIN using keypad
+ If correct:
+LCD shows "ACCESS GRANTED"
+Green LED turns ON
+ If incorrect:
+LCD shows "ACCESS DENIED"
+Red LED turns ON
+Buzzer sounds
+ After 3 incorrect attempts:
+System locks for 10 seconds
+LCD shows "LOCKED!"
