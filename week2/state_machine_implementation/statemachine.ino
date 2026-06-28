@@ -13,6 +13,10 @@
 // ITEM_SELECTED --> DISPENSING --> IDLE
 // ANY STATE --(cancel)--> IDLE
 //////////////////////////////////////////////////////////
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+*/
 
 enum State {
   IDLE,
