@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: dc motor control
+*/
 int potPin = A0;
 
 int enA = 9;
