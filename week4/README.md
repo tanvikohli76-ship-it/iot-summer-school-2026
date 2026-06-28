@@ -40,8 +40,9 @@ When implemented on hardware:
 4. Arduino reads the data using Serial.read()
 5. LEDs respond based on received commands
 
-## Project title
 ## ESP32 BLE Sensor Dashboard (DHT22)
+
+**Project Description**
 
 This project uses an ESP32 microcontroller to read temperature and humidity data from a DHT22 sensor and broadcast it over Bluetooth Low Energy (BLE). The data is updated every 3 seconds and can be viewed using BLE scanner apps such as nRF Connect or LightBlue.
 
