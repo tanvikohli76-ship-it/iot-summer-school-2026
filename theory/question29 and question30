@@ -1,0 +1,36 @@
+Q29. (Theory) What is sensor calibration and why is it important in IoT systems? How would you calibrate an analog soil moisture sensor to give accurate percentage readings? Describe the two-point calibration method.
+Sensor Calibration:
+Sensor calibration means checking and adjusting a sensor so that it gives correct and accurate readings.
+Why is it important in IoT?
+It improves accuracy of data.
+Reduces measurement errors.
+Makes IoT systems more reliable.
+Helps devices make correct decisions based on sensor data.
+Calibration of an Analog Soil Moisture Sensor-
+A soil moisture sensor may show different values even under the same conditions. Therefore, calibration is needed to get correct moisture percentage readings.
+Two-Point Calibration Method-
+This method uses two known values:
+1.  Dry Point
+Keep the sensor in dry air or completely dry soil.
+Note the sensor reading.
+This value is considered 0% moisture.
+2.  Wet Point
+Put the sensor in water or very wet soil.
+Note the sensor reading.
+This value is considered 100% moisture.
+3.  Use These Values
+Any reading between the dry and wet values is converted into a moisture percentage.
+This gives more accurate soil moisture readings.
+
+Q30. (Theory) Explain I2C protocol with respect to IoT sensor communication. What are SDA and SCL lines? How does I2C addressing work? Name 3 common IoT sensors that use I2C.
+I2C (Inter-Integrated Circuit) is a communication protocol used to connect sensors and other devices with a microcontroller such as Arduino, ESP32, or Raspberry Pi. It allows multiple devices to communicate using only two wires, making the circuit simple and reducing wiring.
+SDA and SCL Lines-
+I2C uses two communication lines:
+SDA (Serial Data Line): Used to transfer data between devices.
+SCL (Serial Clock Line): Used to send clock signals that synchronize data transfer.
+How I2C Addressing Works-
+In I2C communication, every device has a unique address. When the master device (such as Arduino) wants to communicate with a sensor, it sends the address of that sensor. Only the device with the matching address responds, while all other devices ignore the message. This allows many sensors to share the same SDA and SCL lines.
+Common IoT Sensors that Use I2C-
+BMP280 – Temperature and pressure sensor.
+MPU6050 – Accelerometer and gyroscope sensor.
+BH1750 – Light intensity sensor.
