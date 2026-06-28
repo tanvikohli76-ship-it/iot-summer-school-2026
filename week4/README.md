@@ -102,3 +102,53 @@ Data updates every 3 seconds
 Values visible inside BLE app
 Real-time sensor monitoring
 
+## Wi-Fi Temperature Monitor (ESP32)
+
+**1. Project Description**
+
+This project uses an ESP32 microcontroller to create a simple web server that displays temperature and humidity data from a DHT11 sensor. The web page is hosted on the ESP32’s local IP address and automatically refreshes every 10 seconds. It also includes a button to toggle an onboard LED and displays system uptime.
+
+**2. Hardware Required**
+ESP32 Dev Module
+DHT11 Temperature & Humidity Sensor
+LED
+220Ω Resistor
+Jumper Wires
+Breadboard
+
+**3. Features Implemented**
+ Displays Temperature (°C)
+ Displays Humidity (%)
+ Auto-refresh every 10 seconds
+ LED Toggle Button via Web Page
+ Displays Uptime (seconds since start)
+
+**4 Working Principle**
+ESP32 connects to a Wi-Fi network
+A web server is started on port 80
+DHT11 sensor reads temperature and humidity
+Data is embedded into an HTML page
+Web page is served at ESP32’s local IP
+User accesses page via browser
+Button sends request to toggle LED
+Uptime is calculated using millis()
+
+**5. How to Run (Hardware Setup)**
+Upload the code to ESP32
+Open Serial Monitor (115200 baud)
+Connect to Wi-Fi
+Note the IP address displayed
+
+Open browser and enter:
+
+http://<ESP32_IP>
+View live data and control LED
+
+**6. Expected Output**
+Web page showing:
+Temperature
+Humidity
+Uptime
+Toggle LED button
+Page refreshes every 10 seconds
+LED toggles when button is pressed
