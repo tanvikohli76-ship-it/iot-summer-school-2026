@@ -88,6 +88,7 @@ Pressing two buttons together plays Sol (392Hz)
 5th button toggles between Major and Minor scale
 Sound stops when button is released
 
+Tinkercad link: https://www.tinkercad.com/things/dNnNi8S4l3y-digital-piano-using-buzzer/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall
 
 ## Serial Command Interface
 
@@ -111,6 +112,8 @@ BLINK_X → LED blinks X times (1–9)
 STATUS → Displays LED state
 RESET → Resets blink counter
 Invalid commands show: ERROR: Unknown command
+
+Tinkercad link: https://www.tinkercad.com/things/kR8BUDoefqH-serial-command-interface/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall
 
 ## PWM Fading Night Light
 
@@ -139,6 +142,8 @@ Slow breathing (~3 seconds cycle)
 Fast pulse (~0.5 seconds cycle)
 SOS pattern (... --- ...)
 Current mode displayed on Serial Monitor
+
+Tinkercad link: https://www.tinkercad.com/things/3LWQc4TijyV-pwm-fading-night-light/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall
 
 ## Vending Machine State Machine
 
@@ -175,3 +180,5 @@ Select Item → moves to ITEM_SELECTED
 Automatic → DISPENSING → IDLE
 Cancel → returns to IDLE from any state
 Serial Monitor prints all state transitions
+
+Tinkercad link: https://www.tinkercad.com/things/inx1LZhW8bB-state-machine-implementation/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall
