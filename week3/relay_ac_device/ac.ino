@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: replay ac device
+*/
 #include <DHT.h>
 
 // ===== PIN SETUP =====
