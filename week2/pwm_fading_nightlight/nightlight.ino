@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: pwm fading night light using ldr
+*/
 int led = 9;
 int button = 2;
 
