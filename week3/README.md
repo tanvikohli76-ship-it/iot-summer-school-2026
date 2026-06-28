@@ -44,6 +44,8 @@ Otherwise:
 → Green LED turns ON (normal condition)
 The system continuously monitors environmental conditions in real time.
 
+Wokwi link: https://wokwi.com/projects/468005215355393025
+
 ## Ultrasonic Parking Sensor System (HC-SR04)
 
 **1. Project Title**
@@ -86,6 +88,8 @@ Distance Range	Output
 millis() allows non-blocking timing
 Unlike delay(), it lets the sensor keep reading continuously
 Required for smooth buzzer + LED behavior
+
+Wokwi link: https://wokwi.com/projects/468006979706302465
 
 ## Smart Street Light (LDR + PIR)
 
@@ -139,6 +143,8 @@ Serial log:
 
 [HH:MM:SS] EVENT: No motion - Dim light
 
+Tinkercad link:  https://www.tinkercad.com/things/4AxusZpvulW-smart-street-light/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall%3Fpage%3D1%26q%3DSMART
+
 ## Multi-Sensor Data Logger (Wokwi)
 
 **1. Project Title**
@@ -190,6 +196,8 @@ Time      : 12345 ms
 Temp      : 28.5 C | Humidity: 65%
 Light     : 73% (Bright)
 Distance  : 42 cm
+
+Wokwi link: https://wokwi.com/projects/468010989361771521
 
 ## Project Title 
 
@@ -245,6 +253,8 @@ Sweep Angle: 0
 Sweep Angle: 90
 Sweep Angle: 180
 
+Tinkercad link: https://www.tinkercad.com/things/ieWLaiAgblp-servo-motor-sweep/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall%3Fpage%3D1%26q%3DSERVO
+
 ## Project Title
 
 ## DC Motor Speed & Direction Control using L298N Driver (Tinkercad)
@@ -298,6 +308,8 @@ State: ON | Direction: Forward | Speed: 65%
 State: ON | Direction: Forward | Speed: 20%
 State: ON | Direction: Reverse | Speed: 75%
 State: OFF | Direction: Reverse | Speed: 0%
+
+Tinkercad link: https://www.tinkercad.com/things/aJ2SVMqcxfo-dc-motor-control/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fall%3Fpage%3D1
 
 ## Relay-Controlled AC Device Simulation (DHT11 + Arduino)
 
@@ -363,6 +375,8 @@ Temp: 33 °C | Relay: ON | Mode: AUTO | Zone: ON Zone
  AC OFF (Temp < 28°C)
 Temp: 27 °C | Relay: OFF | Mode: AUTO | Zone: OFF Zone
 
+Wokwi link: https://wokwi.com/projects/468017814971363329
+
 ## Password Protected Access System using Keypad & LCD
 
 **1. Project Title**
@@ -420,3 +434,5 @@ Buzzer sounds
  After 3 incorrect attempts:
 System locks for 10 seconds
 LCD shows "LOCKED!"
+
+Wokwi link: https://wokwi.com/projects/468056486921972737
