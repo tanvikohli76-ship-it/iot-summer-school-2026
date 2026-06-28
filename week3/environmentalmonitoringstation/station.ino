@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: environmental monitoring station
+*/
 #include "DHT.h"
 #define DHTPIN 2
 #define DHTTYPE DHT22   // <-- CHANGED HERE
