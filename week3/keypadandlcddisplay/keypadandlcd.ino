@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: keypad and lcd display password system
+*/
 #include <LiquidCrystal.h>
 #include <Keypad.h>
 
