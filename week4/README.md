@@ -152,3 +152,96 @@ Uptime
 Toggle LED button
 Page refreshes every 10 seconds
 LED toggles when button is pressed
+
+## MQTT Sensor Publisher (ESP32 + DHT)
+
+**1. Project Title**
+
+MQTT-Based Temperature & Humidity Monitoring with LED Control (ESP32)
+
+**2. Hardware Required**
+ESP32 Development Board
+DHT22 (or DHT11) Temperature & Humidity Sensor
+LED
+Resistor (220Ω)
+Jumper Wires
+Breadboard
+
+Simulation done using Wokwi
+
+MQTT Broker
+Public Broker: broker.hivemq.com
+Port: 1883
+
+**3. Topics Used**
+
+Temperature:
+
+iitjammu/summer26/tanvi/temperature
+
+Humidity:
+
+iitjammu/summer26/tanvi/humidity
+
+LED Control (Subscribe):
+
+iitjammu/summer26/tanvi/led_control
+
+Data Format (JSON)
+
+Sensor data is published every 5 seconds in JSON format:
+
+{"value": 24.0, "unit": "C", "ts": 12345}
+{"value": 40.0, "unit": "%", "ts": 12345}
+
+**4. Working Principle**
+ESP32 connects to Wi-Fi network
+Connects to MQTT broker
+Reads temperature & humidity from DHT sensor
+Publishes data every 5 seconds
+Subscribes to LED control topic
+Turns LED ON/OFF based on received message
+
+**5. How to Test (Without Hardware)**
+Step 1: Run Simulation
+
+Open project in Wokwi and start simulation
+
+ Step 2: Open MQTT Client
+
+Use browser-based client:
+
+ HiveMQ WebSocket Client
+
+ Step 3: Connect
+
+Click Connect (default settings)
+
+ Step 4: Subscribe
+
+Add subscription:
+
+iitjammu/summer26/tanvi/#
+ Step 5: Observe Data
+
+You will see:
+
+Temperature data
+Humidity data
+JSON messages updating every 5 seconds
+ Step 6: Test LED Control
+
+Publish:
+
+Message	Result
+ON	LED turns ON
+OFF	LED turns OFF
+
+Topic:
+
+iitjammu/summer26/tanvi/led_control
+
+**6. Output**
+MQTT messages visible in client
+JSON format verified
+LED responds to commands
