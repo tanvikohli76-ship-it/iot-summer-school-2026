@@ -40,6 +40,8 @@ When implemented on hardware:
 4. Arduino reads the data using Serial.read()
 5. LEDs respond based on received commands
 
+Wokwi link: https://wokwi.com/projects/468065862156908545
+
 ## ESP32 BLE Sensor Dashboard (DHT22)
 
 **Project Description**
@@ -102,6 +104,8 @@ Data updates every 3 seconds
 Values visible inside BLE app
 Real-time sensor monitoring
 
+Wokwi link: https://wokwi.com/projects/468072819228539905
+
 ## Wi-Fi Temperature Monitor (ESP32)
 
 **1. Project Description**
@@ -152,6 +156,8 @@ Uptime
 Toggle LED button
 Page refreshes every 10 seconds
 LED toggles when button is pressed
+
+Wokwi link: https://wokwi.com/projects/468082202047876097
 
 ## MQTT Sensor Publisher (ESP32 + DHT)
 
@@ -245,3 +251,5 @@ iitjammu/summer26/tanvi/led_control
 MQTT messages visible in client
 JSON format verified
 LED responds to commands
+
+Wokwi link: https://wokwi.com/projects/468083330130163713
