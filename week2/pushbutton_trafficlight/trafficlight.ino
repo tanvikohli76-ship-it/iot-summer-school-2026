@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: push button controlled traffic light system
+*/
 const int redLED = 10;
 const int yellowLED = 9;
 const int greenLED = 8;
