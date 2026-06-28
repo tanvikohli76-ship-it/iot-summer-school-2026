@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: serial command interface
+*/
 String command = "";
 int ledPin = 13;
 
