@@ -1,3 +1,8 @@
+/*
+  Author: Tanvi Kohli
+  Date: 2026-06-27
+  Description: servo motor control
+*/
 #include <Servo.h>
 
 Servo servo;
