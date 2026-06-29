@@ -13,28 +13,44 @@ This repository contains all assignments completed as part of the IIT Jammu Summ
 The repository also reflects proper use of GitHub version control, structured documentation, and project-based learning, as required in the assignment guidelines .
 
 **Objectives**
+
 Apply IoT fundamentals through hands-on projects
+
 Learn Arduino programming and embedded systems
+
 Work with sensors, actuators, and real-time data
+
 Implement wireless communication (Wi-Fi, Bluetooth, MQTT)
+
 Practice GitHub workflows (commits, branches, pull requests)
+
 Build well-documented and structured engineering projects
 
 **Repository Structure**
+
 iot-summer-school-2026/
 │
+
 ├── week1/          # GitHub setup & basic Arduino programs
+
 ├── week2/          # Arduino fundamentals & logic-based projects
+
 ├── week3/          # Sensors, actuators & data logging
+
 ├── week4/          # Wireless communication & IoT protocols
+
 ├── final_project/  # Advanced IoT project (if applicable)
+
 ├── theory/         # Conceptual answers and diagrams
+
 ├── portfolio/      # Additional documentation
+
 └── README.md       # Main project documentation
 
 This structure follows the required modular breakdown of assignments across 5 modules covering 50 questions .
 
 **Modules Covered**
+
 🔹 Module 1: GitHub & Version Control
 Repository setup and organization
 Commit history and branching strategies
