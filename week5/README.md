@@ -401,3 +401,85 @@ Monitor system + MQTT
 Wokwi Link- https://wokwi.com/projects/468706499967752193
 
 Simulation video link- https://drive.google.com/file/d/1rTSCtjCIsd-X5yWxSpfohC_7GsdqQ2qX/view?usp=sharing
+
+## River Water Level Alert System (Flood Detection)
+
+An IoT-based Flood Early Warning System using ESP32 and HC-SR04 ultrasonic sensor to monitor water level in real time and trigger alerts.
+
+📌 Project Overview
+
+This project simulates a river flood monitoring system using a water tank. The system continuously measures the distance between the sensor and water surface.
+
+As water level rises → distance decreases
+Alerts are triggered based on predefined thresholds
+Data is sent to cloud (ThingSpeak) for live visualization
+
+🚨 Alert Levels
+Level	Distance (cm)	Indication
+🟢 NORMAL	> 30 cm	Green LED
+🟡 WARNING	15 – 30 cm	Yellow LED + Beep
+🔴 CRITICAL	< 15 cm	Red LED + Continuous Alarm
+
+⚙️ Components Used
+ESP32 Microcontroller
+HC-SR04 Ultrasonic Sensor
+Buzzer
+LEDs (Green, Yellow, Red)
+Resistors
+Breadboard & Jumper Wires
+
+🔌 Circuit Connections
+Component	ESP32 Pin
+TRIG	GPIO 5
+ECHO	GPIO 18
+BUZZER	GPIO 4
+GREEN LED	GPIO 12
+YELLOW LED	GPIO 13
+RED LED	GPIO 14
+
+🧠 Working Principle
+Ultrasonic sensor measures distance using echo time
+Rolling average smooths noisy readings
+System classifies water level:
+Raw values → fast alert detection
+Average → stable data logging
+Alerts are triggered using LEDs and buzzer
+Data is sent to cloud using HTTP protocol
+
+☁️ Cloud Integration (ThingSpeak)
+
+This project uses ThingSpeak to display real-time graphs.
+
+👉 Setup steps:
+
+Create a channel on
+ThingSpeak
+Add fields:
+Field 1 → Distance
+Field 2 → Alert Level (0,1,2)
+Copy Write API Key
+Replace in code:
+String apiKey = "YOUR_API_KEY";
+
+📊 Output
+Real-time distance vs time graph
+Flood level visualization
+Serial monitor debug output
+
+🖥️ Sample Serial Output
+Raw: 14 cm | Avg: 16 cm
+Level: CRITICAL
+HTTP Response: 200
+
+⚠️ Important Notes
+ThingSpeak requires 15-second delay between updates
+Only numeric data is accepted in fields
+Do NOT upload API key in public repositories
+
+🔐 Security Note
+
+API keys should be stored securely and not hardcoded in public repositories. Use a separate secrets.h file and add it to .gitignore.
+
+Wokwi link- https://wokwi.com/projects/468709511884120065
+
+Simulation link- https://drive.google.com/file/d/1RZYX3bD2VQ40-_wSMDrmnGJZRcuvguOa/view?usp=sharing
