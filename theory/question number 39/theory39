@@ -1,0 +1,16 @@
+Q39. (Theory) What is an IoT gateway? Draw a simple diagram showing the relationship 
+between: IoT Sensor Nodes → Gateway → Cloud → User Application. What protocols are 
+typically used at each layer? (2 marks) 
+
+An IoT Gateway is a device that acts as a bridge between IoT sensor nodes and the cloud. 
+It collects data from sensors, processes or filters it if required, and then sends it to the cloud for storage and analysis. 
+The gateway also receives commands from the cloud and forwards them to the IoT devices.
+
+Working
+
+The sensor nodes collect data such as temperature, humidity, or soil moisture and send it to the gateway. 
+The gateway forwards the data to the cloud using internet protocols. 
+The cloud stores and analyzes the data, and users can view the information through a mobile app or web application.
+An IoT Gateway is an intermediary device that connects IoT sensors to the cloud. It collects data from sensors, processes it, and sends it to the cloud.
+Common protocols include Zigbee, LoRa, BLE, MQTT, and HTTP/HTTPS.
+
