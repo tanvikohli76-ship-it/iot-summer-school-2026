@@ -101,4 +101,5 @@ System works without WiFi or Internet
 Bluetooth is not supported in simulation (Wokwi)
 
 Wokwi link: https://wokwi.com/projects/468692807982941185
-Simulation video link: https://app.clipchamp.com/consumer/editor?driveId=0031A02AA0F396EF&folderId=31A02AA0F396EF%21sbd866f4b337b4cbfa88d151147615c89&itemId=31A02AA0F396EF%21s9403e050e6da493b8763e60b858cd448
+
+Simulation video link: C:\Users\hp\Videos\Screen Recordings\smart home air quality monitor.zip
