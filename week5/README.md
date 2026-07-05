@@ -293,3 +293,111 @@ Alert Completed
 Wokwi link- https://wokwi.com/projects/468703883110848513
 
 Simulation Video Link- https://drive.google.com/file/d/1WcLLKi0jyxia1ZWjbGTljJVKJk1fD_ms/view?usp=sharing
+
+## Smart Greenhouse Controller (ESP32 + MQTT + LCD)
+
+📌 Overview
+
+This project is an IoT-based Smart Greenhouse Controller designed for floriculture applications (e.g., tulips and roses in Kashmir). It monitors and maintains optimal environmental conditions using sensors and automated control.
+
+The system ensures:
+
+🌡 Temperature: 18–22°C
+💧 Humidity: 60–70%
+☀️ Light: 12 hours/day
+
+It provides:
+
+📟 Local display (LCD + Serial Monitor)
+🌐 Remote monitoring via MQTT cloud
+
+🎯 Features
+✅ DHT11 for temperature & humidity monitoring
+✅ LDR with running average (10 samples) for light detection
+✅ 3 outputs (Heater, Fan, Grow Light) using LEDs
+✅ Bang-bang control with hysteresis (PID-like)
+✅ 16x2 I2C LCD (auto cycles every 3 sec)
+✅ Serial Monitor output (clean formatted data)
+✅ MQTT publishing to cloud dashboard
+✅ Stable, non-spamming data transmission
+
+🧰 Components Used
+ESP32
+DHT11 Sensor
+LDR + Resistor
+16x2 I2C LCD
+3 LEDs (simulate relays)
+Jumper wires
+
+🔌 Pin Configuration
+Component	ESP32 Pin
+DHT11 DATA	4
+LDR	34
+Heater (LED)	25
+Fan (LED)	26
+Grow Light	27
+LCD SDA	21
+LCD SCL	22
+LCD VCC	5V (VIN)
+LCD GND	GND
+
+⚙️ Working Principle
+1. Sensor Monitoring
+DHT11 reads temperature & humidity
+LDR calculates average light intensity
+2. Control Logic (Bang-Bang + Hysteresis)
+If temperature < 18°C → Heater ON
+If temperature > 22°C → Fan ON
+If humidity high → Fan ON
+If light low → Grow light ON
+3. Display System
+LCD cycles every 3 seconds:
+Temp & Humidity
+Light level
+System status
+5. Data Output
+📟 Serial Monitor → Detailed logs
+🌐 MQTT → Cloud data publishing
+
+📊 Serial Monitor Output Example
+------ GREENHOUSE DATA ------
+Temperature: 21.0 °C
+Humidity: 65.0 %
+Light Avg: 1320
+Heater: 0
+Fan: 0
+Light: 1
+
+
+🌐 MQTT Cloud Setup
+👉 Open:
+
+HiveMQ Web Client
+
+📡 Subscribe to Topics:
+greenhouse/temp
+greenhouse/humidity
+greenhouse/light
+greenhouse/heater
+greenhouse/fan
+greenhouse/lightStatus
+
+➡ You will see live real-time data from ESP32
+
+🖥️ How to Run
+▶️ On Wokwi
+Create ESP32 project
+Add DHT11, LCD, LDR, LEDs
+Connect as per pin table
+Paste code
+Run simulation
+
+▶️ On Hardware
+Assemble circuit
+Upload code via Arduino IDE
+Open Serial Monitor (115200 baud)
+Monitor system + MQTT
+
+Wokwi Link- https://wokwi.com/projects/468706499967752193
+
+Simulation video link- https://drive.google.com/file/d/1rTSCtjCIsd-X5yWxSpfohC_7GsdqQ2qX/view?usp=sharing
