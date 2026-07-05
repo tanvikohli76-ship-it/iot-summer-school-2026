@@ -208,3 +208,88 @@ Door Unlocked
 Wokwi Link- https://wokwi.com/projects/468702046367308801
 
 Simulation Video Link- https://drive.google.com/file/d/1HDwC1G7ZCqKF-udJhk6ggLTsmMhKaEQs/view?usp=drive_link
+
+## PIR-Based Smart Security Alert System (ESP32)
+
+📌 Overview
+
+This project is a Smart Security Alert System built using the ESP32 microcontroller and a PIR motion sensor. It detects motion and triggers a multi-level alert system using LEDs and a buzzer.
+
+The system is designed to simulate a real-world intrusion detection setup with time-based activation and alert escalation.
+
+🎯 Features
+✅ Motion detection using PIR sensor
+✅ Multi-stage alert system (Green → Yellow → Red)
+✅ Buzzer with increasing intensity (PWM-based sound)
+✅ Time-window based activation
+✅ Serial monitor logging for debugging and demo
+✅ Cooldown mechanism to prevent repeated triggering
+
+🧰 Components Used
+ESP32
+PIR Motion Sensor
+Buzzer (active/passive)
+3 LEDs (Green, Yellow, Red)
+Resistors (for LEDs)
+Jumper wires
+
+🔌 Pin Configuration
+Component	ESP32 Pin
+PIR Sensor	27
+Buzzer	25
+Green LED	18
+Yellow LED	19
+Red LED	21
+
+⚙️ Working Principle
+The PIR sensor continuously monitors motion.
+When motion is detected:
+System checks if it is within the active time window.
+If valid, it triggers the alert system.
+Alert system behavior:
+🟢 Green LED + short beep
+🟡 Yellow LED + medium beep
+🔴 Red LED + long beep
+A cooldown of 3 seconds prevents repeated triggering.
+All events are logged in the Serial Monitor.
+
+⏰ Time Window Feature
+
+You can restrict system activity using Serial Monitor commands:
+
+SET_HOURS start end
+Example:
+SET_HOURS 22 6
+
+➡ System will only activate between 10 PM and 6 AM
+
+If not set, the system runs 24/7 by default.
+
+🔊 Buzzer Implementation
+Uses ESP32 PWM (LEDC) for sound generation
+Different frequencies simulate alert escalation
+Ensures proper sound even in simulation (Wokwi)
+
+🖥️ How to Run
+▶️ On Wokwi
+Create ESP32 project
+Add components (PIR, LEDs, buzzer)
+Connect pins as per table
+Paste the code
+Run simulation
+
+▶️ On Hardware
+Connect components properly
+Upload code via Arduino IDE
+Open Serial Monitor (115200 baud)
+Test by moving in front of PIR sensor
+📊 Serial Output Example
+PIR Security System Ready
+
+Motion Event Logged
+MOTION DETECTED
+Alert Completed
+
+Wokwi link- https://wokwi.com/projects/468703883110848513
+
+Simulation Video Link- https://drive.google.com/file/d/1WcLLKi0jyxia1ZWjbGTljJVKJk1fD_ms/view?usp=sharing
