@@ -483,3 +483,100 @@ API keys should be stored securely and not hardcoded in public repositories. Use
 Wokwi link- https://wokwi.com/projects/468709511884120065
 
 Simulation link- https://drive.google.com/file/d/1RZYX3bD2VQ40-_wSMDrmnGJZRcuvguOa/view?usp=sharing
+
+## Heart Rate & SpO₂ Monitor (Simulation)
+
+📌 Overview
+
+This project is a simulation-based health monitoring system built using an ESP32 and an LDR (Light Dependent Resistor) as a proxy sensor.
+
+It simulates:
+
+Heart Rate (bpm)
+Blood Oxygen Saturation (SpO₂ %)
+
+⚠️ Note: This is a learning prototype and not a medical device.
+
+🎯 Features
+
+📟 Real-time monitoring (updates every 2 seconds)
+📊 Simulated Heart Rate & SpO₂ values
+🔄 5-sample rolling average for noise reduction
+🚨 Alert system using Red LED
+🧾 Serial output in CSV format for logging
+🧪 Fully testable in Wokwi simulator
+
+⚙️ Components Used
+ESP32
+LDR (Photoresistor)
+10kΩ Resistor (voltage divider)
+Red LED
+220Ω Resistor
+Breadboard & jumper wires
+
+🔌 Circuit Connections
+LDR (Analog Input)
+One side → 3.3V
+Other side → GPIO 34
+From GPIO 34 → 10kΩ → GND
+LED (Alert)
+GPIO 14 → 220Ω → LED → GND
+
+🧠 Working Principle
+The LDR simulates sensor input based on light intensity
+Analog values are smoothed using a 5-reading rolling average
+Values are mapped to:
+Heart Rate (40–140 bpm)
+SpO₂ (88–100%)
+The system continuously checks for abnormal conditions
+
+🚨 Alert Logic
+
+The Red LED turns ON when:
+
+Heart Rate < 50 bpm
+Heart Rate > 120 bpm
+SpO₂ < 94%
+
+Otherwise, the LED remains OFF.
+
+📊 Sample Output (Serial Monitor)
+Time,HeartRate,SpO2
+2,78,98
+4,110,96
+6,130,92
+🗂️ Data Logging
+
+A sample log file is included:
+
+/data/health_log.csv
+
+Example:
+
+Time,HeartRate,SpO2
+2,78,98
+4,110,96
+6,130,92
+
+🌐 Wokwi Simulation
+
+Run the project online:
+
+👉 Open in Wokwi
+
+Steps:
+Create new ESP32 project
+Add LDR, resistors, LED
+Paste code
+Start simulation
+Adjust LDR slider to test behavior
+
+🧪 Testing Behavior
+Condition	Result
+Medium light	✅ Normal (LED OFF)
+Very dark	🔴 Low HR / SpO₂ → LED ON
+Very bright	🔴 High HR → LED ON
+
+Wokwi Link- https://wokwi.com/projects/468721482543270913
+
+Simulation link- https://drive.google.com/file/d/1HM-F_W0__rR2cmNdSYuVL1755BZcqfTi/view?usp=sharing
