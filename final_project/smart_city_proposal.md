@@ -49,39 +49,51 @@ Code-
 // ESP32 + LDR + PIR
 
 #define LDR_PIN 34
+
 #define PIR_PIN 27
+
 #define LIGHT_PIN 2
 
 void setup() {
+
   Serial.begin(115200);
 
   pinMode(PIR_PIN, INPUT);
+  
   pinMode(LIGHT_PIN, OUTPUT);
 }
 
 void loop() {
 
   int ldrValue = analogRead(LDR_PIN);
+  
   int motion = digitalRead(PIR_PIN);
 
   Serial.print("LDR Value: ");
+  
   Serial.println(ldrValue);
 
   // Low value means darkness
+  
   if (ldrValue < 1000) {
 
     if (motion == HIGH) {
+    
       digitalWrite(LIGHT_PIN, HIGH);
+      
       Serial.println("Motion Detected - Street Light ON");
     }
     else {
+    
       digitalWrite(LIGHT_PIN, LOW);
+      
       Serial.println("No Motion - Street Light OFF");
     }
 
   } else {
 
     digitalWrite(LIGHT_PIN, LOW);
+    
     Serial.println("Day Time - Street Light OFF");
 
   }
@@ -130,21 +142,26 @@ Code-
 // NodeMCU (ESP8266) + HC-SR04
 
 #define TRIG_PIN D1
+
 #define ECHO_PIN D2
 
 void setup() {
+
   Serial.begin(115200);
 
   pinMode(TRIG_PIN, OUTPUT);
+  
   pinMode(ECHO_PIN, INPUT);
 }
 
 void loop() {
 
   digitalWrite(TRIG_PIN, LOW);
+  
   delayMicroseconds(2);
 
   digitalWrite(TRIG_PIN, HIGH);
+  
   delayMicroseconds(10);
 
   digitalWrite(TRIG_PIN, LOW);
@@ -154,16 +171,22 @@ void loop() {
   float distance = duration * 0.034 / 2;
 
   Serial.print("Distance: ");
+  
   Serial.print(distance);
+  
   Serial.println(" cm");
 
   if (distance < 10) {
+  
     Serial.println("Parking Slot Occupied");
+    
   } else {
+  
     Serial.println("Parking Slot Available");
   }
 
   delay(1000);
+  
 }
 
 ---
@@ -213,6 +236,7 @@ Code-
 #define MQ135_PIN 34
 
 #define DHTPIN 4
+
 #define DHTTYPE DHT11
 
 DHT dht(DHTPIN, DHTTYPE);
@@ -229,19 +253,25 @@ void loop() {
   int airQuality = analogRead(MQ135_PIN);
 
   float temperature = dht.readTemperature();
+  
   float humidity = dht.readHumidity();
 
   Serial.println("------ Air Quality Data ------");
 
   Serial.print("MQ135 Value: ");
+  
   Serial.println(airQuality);
 
   Serial.print("Temperature: ");
+  
   Serial.print(temperature);
+  
   Serial.println(" °C");
 
   Serial.print("Humidity: ");
+  
   Serial.print(humidity);
+  
   Serial.println(" %");
 
   Serial.println("------------------------------");
