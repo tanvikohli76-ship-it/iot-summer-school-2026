@@ -342,5 +342,6 @@ Local Humidity: 55 %
 
 Humidity Difference: 5
 
+Wokwi link: https://wokwi.com/projects/468687138478733313
 
 
