@@ -253,3 +253,94 @@ JSON format verified
 LED responds to commands
 
 Wokwi link: https://wokwi.com/projects/468083330130163713
+
+## REST API – Weather Data Fetcher (ESP32 + DHT11)
+
+**1. Project Overview**
+
+This project demonstrates how to integrate an ESP32 microcontroller with a REST API to fetch real-time weather data from the internet and compare it with local sensor readings.
+
+The system uses:
+
+OpenWeatherMap API (cloud data)
+DHT11 sensor (local data)
+
+It then displays both values on the Serial Monitor and calculates the difference between them.
+
+**2. Objective**
+
+Fetch live weather data using HTTP requests
+Parse JSON response from API
+Read temperature & humidity using DHT11
+Compare cloud data with real sensor values
+Practice secure API key handling
+
+**3. Components Required**
+
+ESP32
+DHT11 Temperature & Humidity Sensor
+Jumper wires
+Breadboard
+
+**4. Circuit Connections**
+
+DHT11 Sensor
+Pin	Connection
+VCC	3.3V
+GND	GND
+DATA	GPIO 4
+
+**5. API Setup**
+
+Create a free account at:
+-OpenWeatherMap
+Generate your API Key
+
+Create a file named config.h:
+
+#define WIFI_SSID "your_wifi_name"
+
+#define WIFI_PASSWORD "your_wifi_password"
+
+#define API_KEY "your_openweather_api_key"
+
+#define CITY "Jammu"
+
+Add config.h to .gitignore
+
+**6. Working Principle**
+
+ESP32 connects to WiFi
+Sends HTTP GET request to OpenWeatherMap API
+Receives JSON response
+Extracts:
+City Name
+Temperature
+Humidity
+Weather Description
+Reads local data from DHT11
+Compares API vs local values
+Prints everything to Serial Monitor
+
+**7. Sample Output** 
+
+------ WEATHER DATA ------
+
+City: Jammu
+
+Weather: clear sky
+
+API Temp: 32.5 °C
+
+Local Temp: 30.0 °C
+
+Temp Difference: 2.5
+
+API Humidity: 60 %
+
+Local Humidity: 55 %
+
+Humidity Difference: 5
+
+
+
