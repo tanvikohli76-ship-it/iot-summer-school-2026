@@ -102,4 +102,4 @@ Bluetooth is not supported in simulation (Wokwi)
 
 Wokwi link: https://wokwi.com/projects/468692807982941185
 
-Simulation video link: C:\Users\hp\Videos\Screen Recordings\smart home air quality monitor.zip
+Simulation video link: https://drive.google.com/file/d/1yVYqG_h9uMiJW1YGWexxervO4Mir9EU3/view?usp=drive_link
