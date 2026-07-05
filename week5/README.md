@@ -580,3 +580,5 @@ Very bright	🔴 High HR → LED ON
 Wokwi Link- https://wokwi.com/projects/468721482543270913
 
 Simulation link- https://drive.google.com/file/d/1HM-F_W0__rR2cmNdSYuVL1755BZcqfTi/view?usp=sharing
+
+Health log file- https://github.com/tanvikohli76-ship-it/iot-summer-school-2026/tree/main/data
