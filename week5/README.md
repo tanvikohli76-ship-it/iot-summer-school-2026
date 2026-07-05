@@ -103,3 +103,108 @@ Bluetooth is not supported in simulation (Wokwi)
 Wokwi link: https://wokwi.com/projects/468692807982941185
 
 Simulation video link: https://drive.google.com/file/d/1yVYqG_h9uMiJW1YGWexxervO4Mir9EU3/view?usp=drive_link
+
+## Smart Door Lock System with OTP (ESP32 + Keypad + LCD + Servo)
+
+📌 Project Overview
+
+This project is an IoT-based Smart Door Lock System that replaces traditional keys with a secure OTP-based authentication mechanism. It is built using an ESP32 microcontroller and simulates a real-world secure access system using a keypad, LCD display, and servo motor.
+
+The system generates a 6-digit OTP after a 4-digit user ID is entered, displays it via Serial Monitor, and grants access only if the correct OTP is entered within a 30-second time window.
+
+⚙️ Features
+
+🔢 4-digit user ID input via 4x4 keypad
+🔐 6-digit OTP generation (randomized)
+⏱️ 30-second OTP validity timer (millis-based, non-blocking)
+📺 16x2 I2C LCD display for user prompts and masked input
+🔄 Servo motor simulation for door locking/unlocking
+📊 Serial Monitor logging for all access attempts
+🚫 OTP expiry protection
+🧠 Secure two-step authentication system
+🧰 Components Used
+Component	Description
+
+ESP32 Dev Board	Main microcontroller
+4x4 Keypad	User input (ID & OTP)
+16x2 LCD (I2C)	Display interface
+Servo Motor (SG90)	Simulates door lock
+Wokwi Simulator	Virtual testing platform
+🔌 Pin Configuration
+
+Keypad → ESP32
+Keypad	ESP32
+R1	13
+R2	12
+R3	14
+R4	27
+C1	26
+C2	25
+C3	33
+C4	32
+Servo Motor
+
+| Signal | ESP32 GPIO 18 |
+| VCC | 5V |
+| GND | GND |
+
+LCD (I2C)
+
+| SDA | GPIO 21 |
+| SCL | GPIO 22 |
+| VCC | 3.3V |
+| GND | GND |
+
+🧠 Working Principle
+
+User enters a 4-digit ID using the keypad
+System generates a random 6-digit OTP
+OTP is displayed in Serial Monitor
+User enters OTP using keypad
+System validates OTP within 30 seconds
+If correct → Servo rotates to unlock door (90°)
+If incorrect/timeout → Access denied
+
+🔁 System Flow
+
+START
+  ↓
+Enter 4-digit ID
+  ↓
+Generate OTP
+  ↓
+Display OTP (Serial Monitor)
+  ↓
+Enter OTP via keypad
+  ↓
+Check timer (30 sec)
+  ↓
+Correct OTP?
+  ├── YES → Unlock door (Servo 90°)
+  └── NO  → Access Denied / Expired
+  
+💻 How to Run in Wokwi
+
+Open https://wokwi.com
+Create a new ESP32 project
+Add components:
+ESP32 Dev Kit
+4x4 Keypad
+16x2 LCD (I2C)
+Servo Motor
+Paste the code into main.ino
+Run simulation
+Open Serial Monitor
+
+📺 Output Example
+
+System Ready
+ID Entered: 1234
+OTP GENERATED: 582913
+Enter OTP:
+ACCESS GRANTED
+Door Unlocked
+
+Wokwi Link- https://wokwi.com/projects/468702046367308801
+
+Simulation Video Link- https://drive.google.com/file/d/1HDwC1G7ZCqKF-udJhk6ggLTsmMhKaEQs/view?usp=drive_link
