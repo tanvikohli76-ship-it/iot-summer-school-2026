@@ -1,0 +1,24 @@
+Q40. (Theory) Explain QoS (Quality of Service) levels in MQTT: QoS 0 (At most once), 
+QoS 1 (At least once), QoS 2 (Exactly once). In an IoT water level monitoring system, 
+which QoS level would you choose and why? (2 marks) 
+
+QoS 0 – At Most Once
+
+In this level, the message is sent only once and there is no confirmation from the receiver. 
+If the message is lost during transmission, it is not sent again. This level provides the fastest communication with the least network overhead.
+
+QoS 1 – At Least Once
+
+In this level, the sender waits for an acknowledgment from the receiver. 
+If no acknowledgment is received, the message is retransmitted. This ensures that the message reaches the receiver, but it may be delivered more than once.
+
+QoS 2 – Exactly Once
+
+This is the highest level of reliability. It uses a four-step handshake process to ensure that the message is delivered exactly one time without duplication. However, it requires more bandwidth and processing.
+
+
+For an IoT water level monitoring system, I would choose QoS 1 (At Least Once). 
+Water level data is important and should reach the monitoring system reliably. 
+QoS 1 ensures that messages are delivered even if the network connection is unstable. 
+Although duplicate messages may occur, they can be easily handled by the application. 
+QoS 0 is less reliable, while QoS 2 adds unnecessary overhead for this type of monitoring system.
