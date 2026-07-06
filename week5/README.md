@@ -104,7 +104,7 @@ Wokwi link: https://wokwi.com/projects/468692807982941185
 
 Simulation video link: https://drive.google.com/file/d/1yVYqG_h9uMiJW1YGWexxervO4Mir9EU3/view?usp=drive_link
 
-## 🌱 Smart Plant Watering System using ESP32
+## Smart Plant Watering System using ESP32
 
 Overview
 
