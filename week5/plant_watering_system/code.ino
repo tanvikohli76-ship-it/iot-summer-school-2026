@@ -1,6 +1,7 @@
 /*Author- Tanvi Kohli
 Date- 06-07-2026
 Description- Automated plantn watering system.*/
+
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
@@ -14,7 +15,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 const char* WIFI_SSID = "Wokwi-GUEST";
 const char* WIFI_PASSWORD = "";
 
-const char* API_KEY = "aea445c1dd708f85c9343cbadf755c99";
+const char* API_KEY = "api";
 const char* CITY = "Jammu";
 
 // ============================
