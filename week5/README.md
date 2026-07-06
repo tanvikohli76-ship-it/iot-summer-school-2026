@@ -197,7 +197,9 @@ Start simulation
 Open Serial Monitor to view system logs
 
 Wokwi link- https://wokwi.com/projects/468699014995645441
+
 Simulation video link- https://drive.google.com/file/d/1-WlG2SZ3LP0cpzMy2JFtzxc892arZgcp/view?usp=sharing
+
 ## Smart Door Lock System with OTP (ESP32 + Keypad + LCD + Servo)
 
 📌 Project Overview
