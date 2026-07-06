@@ -104,6 +104,100 @@ Wokwi link: https://wokwi.com/projects/468692807982941185
 
 Simulation video link: https://drive.google.com/file/d/1yVYqG_h9uMiJW1YGWexxervO4Mir9EU3/view?usp=drive_link
 
+## 🌱 Smart Plant Watering System using ESP32
+
+Overview
+
+This project is an IoT-based smart plant watering system built using the ESP32. The idea is simple: instead of watering plants manually, the system monitors soil moisture and decides when to water automatically.
+
+What makes it smarter is that it doesn’t just rely on soil data — it also checks weather conditions using an online API and avoids watering if it’s raining. On top of that, all data is logged to Google Sheets, and a manual override button is included for user control.
+
+Objectives
+
+Automate plant watering based on soil moisture
+Avoid overwatering by detecting rain conditions
+Use real-time weather data for better decisions
+Store data online for monitoring and analysis
+Provide a manual override option
+Features
+Real-time soil moisture monitoring
+Automatic watering system
+Rain detection using both LDR (simulation) and weather API
+Live display on 16x2 LCD
+Data logging to Google Sheets
+Manual override with safety lock (to prevent repeated triggering)
+
+Components Used
+
+ESP32
+Soil moisture sensor (analog)
+LDR + 10k resistor (for light/rain simulation)
+Push button
+Relay module or pump (LED used in simulation)
+16x2 LCD with I2C
+Jumper wires
+
+Connections (ESP32 Pin Setup)
+
+Soil sensor → GPIO 34
+LDR output → GPIO 35
+Button → GPIO 18
+Pump/Relay → GPIO 19
+LCD SDA → GPIO 21
+LCD SCL → GPIO 22
+
+Notes:
+
+LDR must be connected using a voltage divider
+Button uses internal pull-up
+In real hardware, the pump should be controlled using a relay or transistor
+
+How It Works
+
+ESP32 connects to WiFi
+Every 30 seconds, the system reads:
+Soil moisture
+Light level (LDR)
+Weather data from API
+Based on conditions:
+If soil is dry and no rain → pump turns ON
+If rain is detected → watering is skipped
+If soil is already fine → no action
+Data is displayed on LCD
+Data is sent to Google Sheets
+User can press a button to manually water the plant
+
+Control Logic
+Dry soil + no rain → Water plant
+Dry soil + rain → Skip watering
+Optimal soil → Do nothing
+Wet soil → Do nothing
+API Used
+
+This project uses OpenWeatherMap API to check weather conditions (rain).
+
+Example request:
+http://api.openweathermap.org/data/2.5/weather?q=Jammu&appid=YOUR_API_KEY&units=metric
+
+Google Sheets Logging
+
+Google Apps Script is used to store data in a sheet.
+
+The following data is logged:
+
+Timestamp
+Soil moisture (%)
+Moisture status (Dry/Optimal/Wet)
+Rain condition
+How to Run (Wokwi)
+Open the project in Wokwi
+Add your OpenWeather API key
+Paste your Google Apps Script Web App URL
+Start simulation
+Open Serial Monitor to view system logs
+
+Wokwi link- https://wokwi.com/projects/468699014995645441
+Simulation video link- https://drive.google.com/file/d/1-WlG2SZ3LP0cpzMy2JFtzxc892arZgcp/view?usp=sharing
 ## Smart Door Lock System with OTP (ESP32 + Keypad + LCD + Servo)
 
 📌 Project Overview
