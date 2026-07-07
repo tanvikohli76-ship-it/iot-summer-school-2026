@@ -212,7 +212,7 @@ MQ135 + DHT11 Sensors → MQTT Protocol → Cloud Platform → Air Quality Dashb
 
 Working
 
-The MQ135 sensor detects harmful gases and pollutants present in the atmosphere, while the DHT11 sensor measures temperature and humidity. 
+The MQ2 sensor detects harmful gases and pollutants present in the atmosphere, while the DHT22 sensor measures temperature and humidity. 
 The collected data is transmitted to the cloud where it can be analyzed and displayed on a dashboard. 
 Authorities can use this information to identify pollution hotspots and take corrective measures.
 
@@ -220,8 +220,8 @@ Estimated Cost Per Node
 
 Component| Approximate Cost (INR)
 ESP32| ₹500
-MQ135 Sensor| ₹250
-DHT11 Sensor| ₹100
+MQ2 Sensor| ₹250
+DHT22 Sensor| ₹100
 Power Supply| ₹150
 Miscellaneous Components| ₹200
 Total| ₹1200
@@ -231,55 +231,50 @@ Code-
 #include <DHT.h>
 
 // Air Quality Monitoring System
-// ESP32 + MQ135 + DHT11
+#include <DHT.h>
 
-#define MQ135_PIN 34
+// MQ2 + DHT11 Air Quality System
 
+#define MQ2_PIN 34
 #define DHTPIN 4
-
-#define DHTTYPE DHT11
+#define DHTTYPE DHT22
 
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
-
   Serial.begin(115200);
-
   dht.begin();
 }
 
 void loop() {
-
-  int airQuality = analogRead(MQ135_PIN);
-
+  int gasValue = analogRead(MQ2_PIN);
   float temperature = dht.readTemperature();
-  
   float humidity = dht.readHumidity();
 
   Serial.println("------ Air Quality Data ------");
 
-  Serial.print("MQ135 Value: ");
-  
-  Serial.println(airQuality);
+  Serial.print("Gas Level (MQ2): ");
+  Serial.println(gasValue);
+
+  // Simple condition (you can adjust threshold)
+  if (gasValue > 1500) {
+    Serial.println("⚠️ Poor Air Quality / Gas Detected!");
+  } else {
+    Serial.println("✅ Air Quality Normal");
+  }
 
   Serial.print("Temperature: ");
-  
   Serial.print(temperature);
-  
   Serial.println(" °C");
 
   Serial.print("Humidity: ");
-  
   Serial.print(humidity);
-  
   Serial.println(" %");
 
   Serial.println("------------------------------");
 
   delay(2000);
 }
-
----
 
 
 
