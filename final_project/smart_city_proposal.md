@@ -101,6 +101,10 @@ void loop() {
   delay(1000);
 }
 
+Wokwi link- https://wokwi.com/projects/468863769504885761
+
+Simulation video link- https://drive.google.com/file/d/1QE2QnnU7-C4VXxcSCCTmillwadJN_jkM/view?usp=drive_link
+
 ---
 
 2. Smart Parking Availability System
@@ -189,6 +193,10 @@ void loop() {
   
 }
 
+Wokwi Link- https://wokwi.com/projects/468864027760797697
+
+Simulation video link- https://drive.google.com/file/d/1RW3Ouh8QGwO81lPVakDfqNP-85nqhcR-/view?usp=drive_link
+
 ---
 
 3. Air Quality Monitoring System
@@ -275,6 +283,10 @@ void loop() {
 
   delay(2000);
 }
+
+Wokwi link- https://wokwi.com/projects/468864490355904513
+
+Simulation link- https://drive.google.com/file/d/12lcWdL5yzP7zX_voKQrgskqVmebXVTtS/view?usp=drive_link
 
 
 
