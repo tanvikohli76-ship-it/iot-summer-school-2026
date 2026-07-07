@@ -141,9 +141,9 @@ Code-
 // Smart Parking Availability System
 // NodeMCU (ESP8266) + HC-SR04
 
-#define TRIG_PIN D1
+#define TRIG_PIN 5
 
-#define ECHO_PIN D2
+#define ECHO_PIN 18
 
 void setup() {
 
